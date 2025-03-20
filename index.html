@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciga Ma Toi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <h1>Ciga Ma Toi</h1>
+    </header>
+
+    <div id="countdown"></div>
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+        <div id="frog">🐸</div>
+    </div>
+    <p id="message">REBASED or naked skiing!</p>
+    <img id="image" src="https://cigamatoi.github.io/Rebased/Rebased.jpg" alt="Surprise Image">
+    <div id="nickname-section">
+        <input type="text" id="nickname-input" placeholder="Enter your nickname..." maxlength="20">
+        <div id="nickname-error"></div>
+        <button id="submit-nickname">Submit</button>
+    </div>
+    <div id="game-buttons" style="display: none;">
+        <button class="game-button" onclick="showSection('quiz')">Quiz</button>
+        <button class="game-button" onclick="showSection('memory')">Memory</button>
+        <button class="game-button" onclick="showSection('whack-a-mole')">Whack-a-Mole</button>
+        <button class="game-button" onclick="showSection('snake')">Snake</button>
+        <button class="game-button" onclick="showSection('flappy-frog')">Flappy Frog</button>
+        <button class="game-button" onclick="showSection('full-ranking')">Full Leaderboard</button>
+    </div>
+
+    <div id="quiz-container" style="display: none;">
+        <div class="question" id="question"></div>
+        <div class="options" id="options"></div>
+        <div id="feedback"></div>
+        <button id="next-btn">Next Question</button>
+        <button class="back-btn" onclick="showSection('main')">Back</button>
+    </div>
+    <div id="score"></div>
+
+    <div id="memory-container" style="display: none;">
+        <div id="memory-game"></div>
+        <div id="memory-score"></div>
+        <button class="back-btn" onclick="showSection('main')">Back</button>
+    </div>
+
+    <div id="whack-a-mole-container" style="display: none;">
+        <div id="whack-a-mole-game"></div>
+        <div id="whack-a-mole-score">Score: 0</div>
+        <div id="whack-a-mole-timer">Time: 30s</div>
+        <div class="hammer" id="hammer"></div>
+        <button class="back-btn" onclick="showSection('main')">Back</button>
+    </div>
+
+    <div id="snake-container" style="display: none;">
+        <canvas id="snake-canvas" width="400" height="400"></canvas>
+        <div id="snake-score">Score: 0</div>
+        <button class="back-btn" onclick="showSection('main')">Back</button>
+    </div>
+
+    <div id="flappy-frog-container" style="display: none;">
+        <canvas id="flappy-frog-canvas" width="400" height="600"></canvas>
+        <div id="flappy-frog-score">Score: 0</div>
+        <button id="play-button">Play</button>
+        <button class="back-btn" onclick="showSection('main')">Back</button>
+    </div>
+
+    <div id="full-ranking-container" style="display: none;">
+        <h1>Full Leaderboard</h1>
+        <ol id="full-ranking-list"></ol>
+        <button class="back-btn" onclick="showSection('main')">Back</button>
+    </div>
+
+    <div id="top-10-container" style="display: none;">
+        <h1>Top 10 Players</h1>
+        <ol id="top-10-list"></ol>
+    </div>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/quiz.js"></script>
+    <script src="scripts/memory.js"></script>
+    <script src="scripts/whackamole.js"></script>
+    <script src="scripts/snake.js"></script>
+    <script src="scripts/flappyfrog.js"></script>
+</body>
+</html>
